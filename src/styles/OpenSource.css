@@ -1,0 +1,167 @@
+#opensource {
+  margin: auto;
+  max-width: 1000px;
+  padding: 80px 0;
+}
+
+#opensource .section-header {
+  display: flex;
+}
+
+.github-chart-container {
+  margin-bottom: 40px;
+}
+
+.github-chart-card {
+  background-color: var(--light-navy);
+  border: 1px solid var(--lightest-navy);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.github-chart-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--green-bright);
+  box-shadow: 0 20px 30px -15px rgba(100, 255, 218, 0.05);
+}
+
+.github-chart-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.github-chart-title {
+  font-family: "NTR", sans-serif;
+  color: var(--lightest-slate);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.github-chart-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.github-chart-wrapper svg {
+  max-width: 100%;
+  height: auto;
+  min-width: 720px; /* Ensures the calendar maintains grid clarity */
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Override empty day blocks to match our dark navy theme */
+.github-chart-wrapper svg rect[style*="fill:#EEEEEE"],
+.github-chart-wrapper svg rect[style*="fill:#eeeeee"] {
+  fill: var(--lightest-navy) !important;
+}
+
+/* Map active contribution days to shades of our green-accent palette */
+.github-chart-wrapper svg rect[style*="fill:#b1ffff"] {
+  fill: rgba(100, 255, 218, 0.25) !important;
+}
+
+.github-chart-wrapper svg rect[style*="fill:#97ffff"] {
+  fill: rgba(100, 255, 218, 0.55) !important;
+}
+
+.github-chart-wrapper svg rect[style*="fill:#50ccae"] {
+  /* This covers both intermediate and higher scores returned by the API */
+  fill: rgba(100, 255, 218, 0.85) !important;
+}
+
+/* Override month and day labels to match the site's text color */
+.github-chart-wrapper svg text {
+  fill: var(--light-slate) !important;
+}
+
+
+.opensource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  grid-gap: 20px;
+}
+
+@media (max-width: 1080px) {
+  .opensource-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+.opensource-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem 1.75rem;
+  background-color: var(--light-navy);
+  border: 1px solid var(--lightest-navy);
+  border-radius: 16px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.opensource-card:hover {
+  transform: translateY(-7px);
+  background-color: var(--lightest-navy);
+  border-color: var(--green-bright);
+}
+
+.opensource-card .card-header {
+  margin-top: -20px;
+  display: flex;
+  padding: 1.25em 0 !important;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: none !important;
+}
+
+.opensource-card .card-title {
+  font-family: "NTR", sans-serif;
+  color: var(--lightest-slate);
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.opensource-card .card-desc {
+  font-family: "NTR", sans-serif;
+  color: var(--slate);
+  font-size: 16px;
+  line-height: 1.5;
+  flex-grow: 1;
+  padding-bottom: 20px;
+}
+
+.opensource-card .card-tech {
+  font-family: "NTR", sans-serif;
+  color: var(--green-bright);
+  font-size: 14px;
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  #opensource {
+    padding: 60px 20px;
+  }
+
+  .github-chart-wrapper {
+    justify-content: flex-start;
+  }
+
+  .github-chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
