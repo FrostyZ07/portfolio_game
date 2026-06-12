@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/portfolio_game/',
+  base: '/',
   plugins: [react()],
   server: {
     host: true,
