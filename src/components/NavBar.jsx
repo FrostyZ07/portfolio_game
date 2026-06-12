@@ -4,6 +4,7 @@ import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import "../styles/NavBar.css";
+import { handleScrollToSection } from "../utils/navigation";
 
 const NavBar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -36,16 +37,16 @@ const NavBar = () => {
       onToggle={(isExpanded) => setExpanded(isExpanded)}
     >
       <Container>
-        <Navbar.Brand href="/">Thanmay.</Navbar.Brand>
+        <Navbar.Brand href="#/">Thanmay.</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" onSelect={() => setExpanded(false)}>
-            <Nav.Link href="/#intro">Home</Nav.Link>
-            <Nav.Link href="/#about">About</Nav.Link>
-            <Nav.Link href="/#experience">Experience</Nav.Link>
-            <Nav.Link href="/#projects">Software</Nav.Link>
-            <Nav.Link href="/#opensource">Open Source</Nav.Link>
-            <Nav.Link href="/#art">Gallery</Nav.Link>
+            <Nav.Link href="#/#intro" onClick={(e) => handleScrollToSection(e, "intro")}>Home</Nav.Link>
+            <Nav.Link href="#/#about" onClick={(e) => handleScrollToSection(e, "about")}>About</Nav.Link>
+            <Nav.Link href="#/#experience" onClick={(e) => handleScrollToSection(e, "experience")}>Experience</Nav.Link>
+            <Nav.Link href="#/#projects" onClick={(e) => handleScrollToSection(e, "projects")}>Software</Nav.Link>
+            <Nav.Link href="#/#opensource" onClick={(e) => handleScrollToSection(e, "opensource")}>Open Source</Nav.Link>
+            <Nav.Link href="#/#art" onClick={(e) => handleScrollToSection(e, "art")}>Gallery</Nav.Link>
           </Nav>
           <Nav className="ms-auto" onSelect={() => setExpanded(false)}>
             <Nav.Link href="mailto:thanmay1100@gmail.com">

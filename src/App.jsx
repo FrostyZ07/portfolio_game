@@ -20,13 +20,23 @@ import "./styles/RobotGame.css";
 import "./styles/Contact.css";
 
 function App() {
-  const { pathname } = useLocation();
+  const location = useLocation();
   const [gameActive, setGameActive] = useState(false);
   const [showGameInfo, setShowGameInfo] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (location.pathname === "/" && location.hash) {
+      const id = location.hash.replace("#", "");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname, location.hash]);
 
   return (
     <div className="App">
