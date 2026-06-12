@@ -4,21 +4,22 @@ import FadeInSection from "./FadeInSection";
 import { Link } from "react-router-dom";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
+const base = import.meta.env.BASE_URL;
 const ArtGallery = () => {
   const allArt = [
-    { src: "/assets/art/up1.jpeg", title: "dna" },
-    { src: "/assets/art/up2.jpeg", title: "dna" },
-    { src: "/assets/art/up3.jpeg", title: "dna" },
-    { src: "/assets/art/up4.jpeg", title: "dna" },
-    { src: "/assets/art/up5.jpeg", title: "dna" },
-    { src: "/assets/art/kseem1.jpg", title: "11th grade" },
-    { src: "/assets/art/kseem2.jpg", title: "anatomy" },
-    { src: "/assets/art/kseem3.jpg", title: "animal" },
-    { src: "/assets/art/rnsit1.jpg", title: "cordyceps" },
-    { src: "/assets/art/rnsit2.jpg", title: "dali" },
-    { src: "/assets/art/rnsit3.jpg", title: "dna" },
-    { src: "/assets/art/kseem4.jpeg", title: "dna" },
-    { src: "/assets/art/neuro1.jpeg", title: "dna" }
+    { src: `${base}assets/art/up1.jpeg`, title: "dna" },
+    { src: `${base}assets/art/up2.jpeg`, title: "dna" },
+    { src: `${base}assets/art/up3.jpeg`, title: "dna" },
+    { src: `${base}assets/art/up4.jpeg`, title: "dna" },
+    { src: `${base}assets/art/up5.jpeg`, title: "dna" },
+    { src: `${base}assets/art/kseem1.jpg`, title: "11th grade" },
+    { src: `${base}assets/art/kseem2.jpg`, title: "anatomy" },
+    { src: `${base}assets/art/kseem3.jpg`, title: "animal" },
+    { src: `${base}assets/art/rnsit1.jpg`, title: "cordyceps" },
+    { src: `${base}assets/art/rnsit2.jpg`, title: "dali" },
+    { src: `${base}assets/art/rnsit3.jpg`, title: "dna" },
+    { src: `${base}assets/art/kseem4.jpeg`, title: "dna" },
+    { src: `${base}assets/art/neuro1.jpeg`, title: "dna" }
 
   ];
 

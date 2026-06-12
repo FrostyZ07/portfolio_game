@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/About.css";
 import FadeInSection from "./FadeInSection";
 
+
+const base = import.meta.env.BASE_URL;
 const About = () => {
   const one = (
     <p>
@@ -44,7 +46,7 @@ const About = () => {
             {two}
           </div>
           <div className="about-image">
-            <img alt="Thanmay M Shetty" src={"/assets/thanmay.jpg"} />
+            <img alt="Thanmay M Shetty" src={`${base}assets/thanmay.jpg`} />
           </div>
         </div>
       </FadeInSection>

@@ -3,14 +3,15 @@ import "../styles/Art.css";
 import FadeInSection from "./FadeInSection";
 import { Link } from "react-router-dom";
 
+const base = import.meta.env.BASE_URL;
 const Art = () => {
   const topArt = [
-    { src: "/assets/art/kseem1.jpg", title: "11th grade" },
-    { src: "/assets/art/kseem2.jpg", title: "anatomy" },
-    { src: "/assets/art/up2.jpeg", title: "animal" },
-    { src: "/assets/art/rnsit1.jpg", title: "cordyceps" },
-    { src: "/assets/art/rnsit2.jpg", title: "dali" },
-    { src: "/assets/art/kseem4.jpeg", title: "dna" }
+    { src: `${base}assets/art/kseem1.jpg`, title: "11th grade" },
+    { src: `${base}assets/art/kseem2.jpg`, title: "anatomy" },
+    { src: `${base}assets/art/up2.jpeg`, title: "animal" },
+    { src: `${base}assets/art/rnsit1.jpg`, title: "cordyceps" },
+    { src: `${base}assets/art/rnsit2.jpg`, title: "dali" },
+    { src: `${base}assets/art/kseem4.jpeg`, title: "dna" }
   ];
 
   return (
