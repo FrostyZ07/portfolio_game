@@ -78,6 +78,16 @@ const JobList = () => {
         "Impressed the KSEEM judges enough with the solution that they personally sponsored our 3rd place prize.",
       ],
     },
+    "AI/ML Intern":{
+      jobTitle:"AI/ML Engineer @",
+      duration: "JUN 2026 - Ongoing",
+      desc: [
+        "Built and supported  production AI features for a product serving 10K+ users using FastAPI, GCP, Firestore, Docker, Git/GitHub",
+        "logging, caching, API design, testing, and cron jobs",
+        "Developed an end-to-end RAG/LLM pipelines using Claude, OpenAI, and OpenRouter",
+        "Evaluated RAGAS and integrate text-to-speech, image-generation, and video-generation models while optimizing inference cost",
+      ]
+    },
   };
 
   const handleChange = (event, newValue) => {

@@ -23,3 +23,29 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Build and tool caches
+.vite
+.eslintcache
+coverage
+*.tgz
+
+# Playwright
+test-results
+playwright-report
+blob-report
+playwright/.cache
+
+# Environment files (keep examples)
+.env
+.env.*
+!.env.example
+
+# OS files
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Local tooling output
+chromium_cli
+.dev-run.log
